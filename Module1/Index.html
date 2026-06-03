@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Event Portal</title>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+    </nav>
+    <main>
+        <h1>Welcome to Community Event Portal</h1>
+    </main>
+    <footer>
+        <p>2026 Community Portal</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Example</title>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+
+        <a href="help.html"
+target="_blank">Help</a>
+    </nav>
+    <section id="home">
+        <h2>Home Section</h2>
+    </section>
+
+    <section id="events">
+        <h2>Events <Section></h2>
+    </section>
+
+    <section id="Contact">
+        <h2>Contact Section</h2>
+    </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Banner</title>
+
+    <style>
+        #welcomeBanner{
+            background-color: purple;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="welcomeBanner">
+
+        <h1>Welcome User</h1>
+
+        <p class="highlight">
+            Register for upcoming events!
+        </p>
+
+        <p>
+            <span style="color:green; font-weight:bold;">
+                Special Offer Available
+            </span>
+        </p>
+
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img{
+width:150px;
+height:100px;
+border:2px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<table border="1">
+<tr>
+<td>
+<img src="event1.jpg" alt="Music" title="Music Event">
+<p>Music Event</p>
+</td>
+
+<td>
+<img src="event2.jpg" alt="Food" title="Food Fest">
+<p>Food Fest</p>
+</td>
+
+<td>
+<img src="event3.jpg" alt="Dance" title="Dance Show">
+<p>Dance Show</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="event4.jpg" alt="Sports" title="Sports Day">
+<p>Sports Day</p>
+</td>
+
+<td>
+<img src="event5.jpg" alt="Art" title="Art Expo">
+<p>Art Expo</p>
+</td>
+
+<td>
+<img src="event6.jpg" alt="Book" title="Book Fair">
+<p>Book Fair</p>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+Name:
+<input type="text" placeholder="Enter name" autofocus required>
+<br><br>
+
+Email:
+<input type="email" placeholder="Enter email" required>
+<br><br>
+
+Date:
+<input type="date" required>
+<br><br>
+
+Event:
+<select>
+<option>Music</option>
+<option>Food Fest</option>
+</select>
+<br><br>
+
+Message:
+<textarea placeholder="Your message"></textarea>
+<br><br>
+
+<input type="submit">
+</form>
+<output>From Submitted Successfully</output>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+Phone:
+<input type="text" onblur="alert('Validating Phone Number')">
+
+<br><br>
+
+<select onchange="alert('Event Fee: 500')">
+<option>Select Event</option>
+<option>Music</option>
+<option>Dance</option>
+</select>
+
+<br><br>
+
+<button onclick="alert('Registration Successful')">
+Submit
+</button>
+
+<br><br>
+
+<img src="event.jpg" width="150"
+ondblclick="this.style.width='300px'">
+
+<br><br>
+
+<textarea onkeyup="count()"
+id="msg"></textarea>
+
+<p id="result"></p>
+
+<script>
+function count(){
+document.getElementById("result").innerHTML=
+document.getElementById("msg").value.length;
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body onbeforeunload="return 'Complete the form first'">
+<video id="myVideo" width="300" controls
+oncanplay="checkDuration()">
+    <source src="video.mp4" type="video/mp4">
+</video>
+<script>
+function checkDuration() {
+    let video = document.getElementById("myVideo");
+
+    if (video.duration >= 60) {
+        alert("Video is at least 1 minute long");
+    } else {
+        alert("Video is less than 1 minute long");
+    }
+}
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<select id="event">
+    <option>Music</option>
+    <option>Sports</option>
+</select>
+<button onclick="save()">Save</button>
+<button onclick="clearData()">Clear</button>
+<script>
+function save(){
+    localStorage.setItem("event",document.getElementById("event").value);
+}
+function clearData(){
+    localStorage.clear();
+    sessionStorage.clear();
+}
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="getLocation()">
+Find Nearby Events
+</button>
+<p id="demo"></p>
+<script>
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(
+        function(pos){
+            document.getElementById("demo").innerHTML =
+            "Latitude: " + pos.coords.latitude +
+            "<br>Longitude: " + pos.coords.longitude;
+        }
+    );
+}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="test()">Click Me</button>
+
+<script>
+function test(){
+    console.log("Button Clicked");
+}
+</script>
+</body>
+</html>
